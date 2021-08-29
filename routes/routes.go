@@ -6,7 +6,7 @@ controllers "go-pg-gin/controllers"
 )
 
 func Routes(router *gin.Engine) {
-router.GET("/", welcome)
+    router.GET("/", welcome)
     router.GET("/api/team", controllers.GetAllPlayers)
     router.POST("/api/team", controllers.CreatePlayer)
     router.GET("/api/team/:Id", controllers.GetSinglePlayer)
