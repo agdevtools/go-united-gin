@@ -43,7 +43,7 @@ router.ServeHTTP(w, req)
 assert.Equal(t, 200, w.Code)
 }
 
-func Test_GetRonaldo(t *testing.T) {
+func Test_GetSinglePlayerWithResponseBody(t *testing.T) {
     router := gin.Default()
     Routes(router)
     respRec = httptest.NewRecorder()
