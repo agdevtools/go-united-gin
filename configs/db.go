@@ -6,13 +6,13 @@ import (
 _ "github.com/lib/pq"      // postgres golang driver
 )
 
-// Connecting to db
+//Connecting to db
 func Connect() *pg.DB {
 opts := &pg.Options{
-User: "izwkmryg",
-Password: "nE7cHfwNbpL4T2zv_3wI1u_5JxDHB0Cr",
-Addr: "tai.db.elephantsql.com:5432",
-Database: "izwkmryg",
+User: "postgres",
+Password: "pgpass",
+Addr: "localhost:55001",
+Database: "postgres",
 }
 var db *pg.DB = pg.Connect(opts)
 if db == nil {
